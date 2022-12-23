@@ -11,6 +11,9 @@ npm run build
 
 npm run dev
 ```
+검색창에 검색하고 enter 시 목록창으로 이동 ( pages 폴더 -> post 폴더 -> index.js)
+목록 선택시 상세창으로 이동 (pages 폴더 -> post 폴더 -> [slug].js )
+상세창 url에서 post뒤에 붙은 post_id로 상세 조회
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
