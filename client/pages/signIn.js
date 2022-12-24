@@ -19,6 +19,8 @@ const SignIn = () => {
     signInWithPopup(auth, provider).then((userData) => {
     const credential = GoogleAuthProvider.credentialFromResult(userData);
     const token = credential.accessToken;
+    console.log(token)
+    window.alert(token)
     localStorage.setItem('accessToken', token)
     router.push('/');
     })
@@ -29,6 +31,8 @@ const SignIn = () => {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
     const token = await user.getIdToken()
+    console.log(token)
+    window.alert(token)
     localStorage.setItem('accessToken', token)
     router.push('/');
   
