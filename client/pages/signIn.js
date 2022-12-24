@@ -16,14 +16,12 @@ const SignIn = () => {
 
   const googleLogin = async() => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider).then((userData) => {
-    const credential = GoogleAuthProvider.credentialFromResult(userData);
-    const token = credential.idToken();
+    const userData = await signInWithPopup(auth, provider)
+    const token = await userData.user.getIdToken();
     console.log(token)
     window.alert(token)
     localStorage.setItem('accessToken', token)
     router.push('/');
-    })
   }
 
   const signIn = async() => {
