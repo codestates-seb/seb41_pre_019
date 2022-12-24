@@ -18,7 +18,7 @@ const SignIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider).then((userData) => {
     const credential = GoogleAuthProvider.credentialFromResult(userData);
-    const token = credential.accessToken;
+    const token = credential.idToken();
     console.log(token)
     window.alert(token)
     localStorage.setItem('accessToken', token)
