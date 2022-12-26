@@ -3,21 +3,30 @@ package pre019.server.user.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pre019.server.user.dto.UserPostDto;
+import pre019.server.user.entity.User;
+import pre019.server.user.mapper.UserMapper;
 import pre019.server.user.service.UserService;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;
+    private final UserMapper mapper;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, UserMapper mapper) {
         this.userService = userService;
+        this.mapper = mapper;
     }
 
     @PostMapping("/join")
-    public ResponseEntity joinUser(){
+    public ResponseEntity joinUser(@Valid @RequestBody UserPostDto userPostDto){
         //TODO 회원가입
+        User user = mapper.userPostDtoToUser(userPostDto);
+        userService.createUser(user);
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
