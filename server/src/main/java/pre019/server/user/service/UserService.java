@@ -25,8 +25,40 @@ public class UserService {
         return user;
     }
 
+    public User findUser(long userId) {
+        return findVerifiedUser(userId);
+    }
+
+    public User updateUser(User user) {
+        User findUser = findVerifiedUser(user.getUserId());
+
+        Optional.ofNullable(user.getReputation())
+                .ifPresent(reputation -> findUser.setReputation(reputation));
+        Optional.ofNullable(user.getPassword())
+                .ifPresent(password -> findUser.setPassword(password));
+        Optional.ofNullable(user.getName())
+                .ifPresent(name -> findUser.setEmail(name));
+
+        return userRepository.save(findUser);
+    }
+
+    public void deleteUser(long userId) {
+        User findUser = findVerifiedUser(userId);
+        userRepository.delete(findUser);
+    }
+
+    // 회원가입 시 존재하는 이메일인지 확인
     private void verifyExistsEmail(String email) {
         Optional<User> user = userRepository.findByEmail(email);
-        if(user.isPresent()) throw new BusinessLogicException(ExceptionCode.MEMBER_EXISTS);
+        if(user.isPresent()) throw new BusinessLogicException(ExceptionCode.USER_EXISTS);
+    }
+
+    // 사용자를 userId로 조회
+    private User findVerifiedUser(long userId) {
+        Optional<User> optionalUser = userRepository.findById(userId);
+        User user =
+                optionalUser.orElseThrow(()->
+                        new BusinessLogicException(ExceptionCode.USER_NOT_FOUND));
+        return user;
     }
 }
