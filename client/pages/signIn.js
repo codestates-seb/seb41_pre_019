@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import { firebase } from "../firebase";
 import { useState } from 'react';
+import authStore  from '../store/auth';
 
 const auth = getAuth(firebase);
 
@@ -9,6 +10,7 @@ const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
+  const setIsLogged = authStore((state) => state.setIsLogged);
 
   const goToSignUp = () => {
     router.push('/signUp');
@@ -21,8 +23,12 @@ const SignIn = () => {
     console.log(token)
     window.alert(token)
     localStorage.setItem('accessToken', token)
+    setIsLogged();
     router.push('/');
+    
   }
+
+
 
   const signIn = async() => {
     try {
@@ -32,9 +38,11 @@ const SignIn = () => {
     console.log(token)
     window.alert(token)
     localStorage.setItem('accessToken', token)
+    setIsLogged();
     router.push('/');
   
-    }  catch {
+  
+    }  catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
       window.alert('아이디 및 비밀번호가 틀립니다')
@@ -131,5 +139,7 @@ const SignIn = () => {
     </div>
   );
 };
+
+
 
 export default SignIn;
