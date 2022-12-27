@@ -1,5 +1,7 @@
 package pre019.server.user.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import pre019.server.exception.BusinessLogicException;
 import pre019.server.exception.ExceptionCode;
@@ -27,6 +29,11 @@ public class UserService {
 
     public User findUser(long userId) {
         return findVerifiedUser(userId);
+    }
+
+    // 전체 사용자 조회(페이지네이션)
+    public Page<User> findUsers(int page, int size) {
+        return userRepository.findAll(PageRequest.of(page,size));
     }
 
     public User updateUser(User user) {

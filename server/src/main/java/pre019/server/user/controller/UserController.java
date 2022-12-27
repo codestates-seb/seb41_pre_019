@@ -1,9 +1,11 @@
 package pre019.server.user.controller;
 
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import pre019.server.dto.MultiResponseDto;
 import pre019.server.user.dto.UserPatchDto;
 import pre019.server.user.dto.UserPostDto;
 import pre019.server.user.entity.User;
@@ -12,6 +14,8 @@ import pre019.server.user.service.UserService;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Positive;
+import java.util.List;
 
 @RestController
 @Validated
@@ -47,9 +51,15 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity getUsers() {
-        //TODO 전체 사용자 조회 -> 페이지네이션 이후 추가 예정
-        return new ResponseEntity(HttpStatus.OK);
+    public ResponseEntity getUsers(@Positive @RequestParam int page,
+                                   @Positive @RequestParam int size) {
+        //TODO 전체 사용자 조회
+        Page<User> pageUsers = userService.findUsers(page-1, size); // 실제 페이지가 0부터 시작
+        List<User> users = pageUsers.getContent(); // 페이지 컨텐츠
+
+        return new ResponseEntity(
+                new MultiResponseDto<>(mapper.usersToUserResponses(users), pageUsers) // User엔티티 -> UserResponseDto
+                ,HttpStatus.OK);
     }
 
     @GetMapping("/{user-id}")
