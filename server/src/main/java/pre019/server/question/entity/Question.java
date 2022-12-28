@@ -1,5 +1,6 @@
 package pre019.server.question.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,12 +22,13 @@ public class Question extends Auditable {
     private Long questionId;
 
     // USER, ANSWER 테이블 연관관계 매핑
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="USER_ID")
+    @JsonBackReference
     private User user;
 
-    @OneToMany(mappedBy = "question")
-    private List<Answer> answers = new ArrayList<>();
+//    @OneToMany(mappedBy = "question", cascade = CascadeType.PERSIST)
+//    private List<Answer> answers = new ArrayList<>();
 
     @Column(nullable = false)
     private String title;
