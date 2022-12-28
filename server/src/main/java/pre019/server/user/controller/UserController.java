@@ -52,9 +52,10 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity getUsers(@Positive @RequestParam int page,
-                                   @Positive @RequestParam int size) {
+                                   @Positive @RequestParam int size,
+                                   @RequestParam(required = false) String tab) {
         //TODO 전체 사용자 조회
-        Page<User> pageUsers = userService.findUsers(page-1, size); // 실제 페이지가 0부터 시작
+        Page<User> pageUsers = userService.findUsers(page-1, size, tab); // 실제 페이지가 0부터 시작
         List<User> users = pageUsers.getContent(); // 페이지 컨텐츠
 
         return new ResponseEntity(

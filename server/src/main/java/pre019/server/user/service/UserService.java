@@ -2,6 +2,7 @@ package pre019.server.user.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import pre019.server.exception.BusinessLogicException;
 import pre019.server.exception.ExceptionCode;
@@ -32,8 +33,11 @@ public class UserService {
     }
 
     // 전체 사용자 조회(페이지네이션)
-    public Page<User> findUsers(int page, int size) {
-        return userRepository.findAll(PageRequest.of(page,size));
+    public Page<User> findUsers(int page, int size, String tab) {
+        Page<User> users;
+        if(tab==null) users = userRepository.findAll(PageRequest.of(page,size));
+        else users = userRepository.findAll(PageRequest.of(page,size, Sort.by(tab)));
+        return users;
     }
 
     public User updateUser(User user) {

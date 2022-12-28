@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import pre019.server.exception.ExceptionCode;
+import pre019.server.exception.ExceptionCode;
 
 import javax.validation.Constraint;
 import javax.validation.ConstraintViolation;
@@ -17,20 +19,28 @@ public class ErrorResponse {
 
     private List<FieldError> fieldErrors;
     private List<ConstraintViolationError> violationErrors;
+    private ExceptionCode exceptionCode;
 
-    private ErrorResponse(List<FieldError> fieldErrors, List<ConstraintViolationError> violationErrors) {
+    private ErrorResponse(List<FieldError> fieldErrors, 
+                          List<ConstraintViolationError> violationErrors,
+                          ExceptionCode exceptionCode) {
         this.fieldErrors = fieldErrors;
         this.violationErrors = violationErrors;
+        this.exceptionCode = exceptionCode;
     } // ErrorResponse의 역할: 에러 정보를 담는 것.
 
     public static ErrorResponse of(BindingResult bindingResult) {
-        return new ErrorResponse(FieldError.of(bindingResult), null);
+        return new ErrorResponse(FieldError.of(bindingResult), null, null);
     } // fieldError 정보를 담는 메서드.
 
     public static ErrorResponse of(Set<ConstraintViolation<?>> violations) {
-        return new ErrorResponse(null, ConstraintViolationError.of(violations));
+        return new ErrorResponse(null, ConstraintViolationError.of(violations), null);
     } // violation 정보를 담는 메서드.
 
+    public static ErrorResponse of(ExceptionCode exceptionCode) {
+        return new ErrorResponse(null, null, exceptionCode);
+    } // ErrorResponse에 BusinessLogic의 exceptionCode 정보를 담는 메서드.
+    
     @Getter
     public static class FieldError {
         private String field;
