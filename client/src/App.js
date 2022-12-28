@@ -1,13 +1,14 @@
-import "./App.css";
-import Search from "./components/Layout/Search";
-import SearchModal from "./components/SearchModal";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import SearchModal from "./components/SearchModal";
+import AllQuestions from "./pages/AllQuestions";
 
 function App() {
   return (
-    <>
-      <Search />
-      <SearchModal />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/questions" element={<AllQuestions />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

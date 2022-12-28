@@ -1,15 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { GoSearch } from "react-icons/go";
-import styled from "styled-components";
 import SearchModal from "../../SearchModal";
 import { useDispatch } from "react-redux";
 import { searchTagAction } from "../../../redux";
-
-const Container = styled.div``;
-
-const SearchContainer = styled.div``;
-
-const Input = styled.input``;
+import { Container, Input, SearchContainer } from "./style";
 
 function Search() {
   const [searchValue, setSearchValue] = useState("");

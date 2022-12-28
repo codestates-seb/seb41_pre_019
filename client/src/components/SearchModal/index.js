@@ -33,6 +33,8 @@ const Container = styled.div`
     > div > div.buttonbox {
     }
     > div > button {
+      display: flex;
+      justify-content: end;
       color: #3e77a0;
       background-color: #e1ecf4;
       border-radius: 2.5px;
