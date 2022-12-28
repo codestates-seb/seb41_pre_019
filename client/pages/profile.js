@@ -6,7 +6,7 @@ import authStore  from '../store/auth';
 
 const auth = getAuth(firebase);
 
-const SignIn = () => {
+const profile = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
@@ -30,7 +30,7 @@ const SignIn = () => {
 
 
 
-  const signIn = async() => {
+  const Update = async() => {
     try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
@@ -97,41 +97,14 @@ const SignIn = () => {
 
               <div>
                 <button
-                  onClick={signIn}
+                  onClick={Update}
                   type="button"
                   className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
-                  Sign in
+                  Update
                 </button>
               </div>
 
-              <div>
-                <button
-                  onClick={goToSignUp}
-                  type="button"
-                  className="flex w-full justify-center rounded-md border border-transparent bg-orange-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
-                >
-                  Sign Up
-                </button>
-              </div>
-              <div>
-                <button
-                  onClick={googleLogin}
-                  type="button"
-                  className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  GOOGLE LOGIN
-                </button>
-              </div>
-              <div>
-                <button
-                  onClick={() => alert('sign in')}
-                  type="button"
-                  className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  FACEBOOK LOGIN
-                </button>
-              </div>
             </form>
           </div>
         </div>
@@ -142,4 +115,4 @@ const SignIn = () => {
 
 
 
-export default SignIn;
+export default profile;
