@@ -1,9 +1,9 @@
 import axios from "axios";
-import {useRouter} from 'next/router'
+import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { askTagsAction } from "../../redux";
-import ToastEditor from "../../components/ToastEditor";
+// import ToastEditor from "../../components/ToastEditor";
 import {
   AskQuestionDiv,
   AskQuestionHead,
@@ -16,6 +16,8 @@ import {
   GoodTitleInfoText,
   InputTitleDiv,
   ToastDiv,
+  TagDiv,
+  // FontAwesomeIcon,
 } from "./style";
 
 const URL = process.env.REACT_APP_API_URL;
@@ -47,7 +49,7 @@ const AskQuestion = () => {
       )
       .then((res) => {
         if (res.status >= 200 && res.status < 300) {
-          router(`/questions/${res.data.postId}`);
+          router.push(`/questions/${res.data.postId}`);
         }
       })
       .catch((error) => console.log(error));
@@ -57,7 +59,7 @@ const AskQuestion = () => {
     <AskQuestionDiv>
       <AskQuestionHead>
         <AskQuestionHeadText>Ask a public question</AskQuestionHeadText>
-        <BackGroundImg></BackGroundImg>
+        {/* <BackGroundImg></BackGroundImg> */}
       </AskQuestionHead>
       <GoodInfoDiv>
         <GoodQuestionInfo>
@@ -84,10 +86,10 @@ const AskQuestion = () => {
         <GoodTitleInfo>
           <GoodTitleHead>Writing a good title</GoodTitleHead>
           <GoodTitleInfoText>
-            <FontAwesomeIcon
-              icon={faPenToSquare}
+            {/* <FontAwesomeIcon
+              // icon={faPenToSquare}
               className="fontImg-pen"
-            ></FontAwesomeIcon>
+            ></FontAwesomeIcon> */}
             <div>
               <p>Your title should summarize the problem.</p>
               <p>
@@ -119,7 +121,6 @@ const AskQuestion = () => {
             Minimum 20 characters.
           </p>
         </div>
-        <ToastEditor />
       </ToastDiv>
       <TagDiv>
         <div>
@@ -129,7 +130,7 @@ const AskQuestion = () => {
             typing to see suggestions.
           </p>
         </div>
-        <TagInput />
+        {/* <TagInput /> */}
       </TagDiv>
       <button onClick={handleSubmit}>Submit your question</button>
     </AskQuestionDiv>
