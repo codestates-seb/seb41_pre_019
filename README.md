@@ -5,3 +5,5 @@ cd client
 npm install
 npm run build
 npm run dev
+
+안녕
