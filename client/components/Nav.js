@@ -16,7 +16,7 @@ export default function Example() {
           onClick={() => router.push("/")}
           className="rounded-xl border border-white p-2 text-xl"
         >
-          🎆
+          <img src = "http://www.ranklogos.com/wp-content/uploads/2015/06/Stack-Overflow-Logo.png"></img>
         </button>
 
         <form className="w-full sm:max-w-3xl">

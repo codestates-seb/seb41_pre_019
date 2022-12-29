@@ -4,7 +4,7 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 
 
 function EditorBox() {
-  return (
+  return (<div style={{width : "790px"}}>
     <Editor
     
       initialValue="hello react editor world!"
@@ -13,6 +13,7 @@ function EditorBox() {
       initialEditType="wysiwyg"
       useCommandShortcut={false}
     />
+    </div>
   );
 }
 
