@@ -24,6 +24,35 @@ const searchReducer = (state = initialstate, action) => {
   }
 };
 
+export const askTagsAction = (res) => {
+  return {
+    type: "TAGS",
+    payload: res,
+  };
+};
+
+const askReducer = (state = initialstate, action) => {
+  switch (action.type) {
+    case "TITLE":
+      return {
+        ...state,
+        title: action.payload,
+      };
+    case "BODY":
+      return {
+        ...state,
+        body: action.payload,
+      };
+    case "TAGS":
+      return {
+        ...state,
+        tags: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
 const combinedReducer = combineReducers({
   // loginReducer,
   // questionReducer,
