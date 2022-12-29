@@ -1,5 +1,6 @@
 package pre019.server.user.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -34,10 +35,15 @@ public class User extends Auditable {
     private int reputation = 0;
 
     // 질문, 답변 연관관계 매핑
-    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    @JsonManagedReference
     private List<Question> questions = new ArrayList<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    @JsonManagedReference
     private List<Answer> answers = new ArrayList<>();
 
+    public User(Long userId) {
+        this.userId = userId;
+    }
 }

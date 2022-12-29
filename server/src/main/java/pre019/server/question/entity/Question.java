@@ -1,6 +1,7 @@
 package pre019.server.question.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,8 +28,9 @@ public class Question extends Auditable {
     @JsonBackReference
     private User user;
 
-//    @OneToMany(mappedBy = "question", cascade = CascadeType.PERSIST)
-//    private List<Answer> answers = new ArrayList<>();
+    @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
+    @JsonManagedReference
+    private List<Answer> answers = new ArrayList<>();
 
     @Column(nullable = false)
     private String title;
