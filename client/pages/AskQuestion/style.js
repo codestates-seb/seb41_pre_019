@@ -110,22 +110,7 @@ export const InputTitleDiv = styled.div`
     border-radius: 3px;
     padding-left: 8px;
   }
-  button {
-    margin-top: 8px;
-    position: relative;
-    display: inline-block;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 40%);
-    background-color: #0a95ff;
-    color: white;
-    padding: 0.8em;
-    font-size: 14px;
-    outline: none;
-    font-weight: normal;
-    text-align: center;
-    cursor: pointer;
-  }
+
 `;
 
 export const ToastDiv = styled.div`
@@ -147,22 +132,7 @@ export const ToastDiv = styled.div`
 `;
 
 export const TagDiv = styled.div`
-  width: 790px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  border: 1px solid #d6d9dc;
-  padding: 35px 30px 15px 30px;
-  div > div {
-    font-size: 17px;
-    font-weight: bolder;
-    margin-bottom: 8px;
-  }
-  div > p {
-    color: #3b4045;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
+  
   button {
     margin-top: 8px;
     position: relative;
