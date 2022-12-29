@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { askTagsAction } from "../../redux";
-// import ToastEditor from "../../components/ToastEditor";
+import Editor from "../../components/ToastEditor";
 import {
   AskQuestionDiv,
   AskQuestionHead,
@@ -122,6 +122,7 @@ const AskQuestion = () => {
           </p>
         </div>
       </ToastDiv>
+      <Editor/>
       <TagDiv>
         <div>
           <div>Tags</div>
