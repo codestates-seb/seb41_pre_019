@@ -16,8 +16,7 @@ import {
   GoodTitleInfoText,
   InputTitleDiv,
   ToastDiv,
-  TagDiv,
-  // FontAwesomeIcon,
+  TagDiv
 } from "./style";
 
 const URL = process.env.REACT_APP_API_URL;
@@ -39,7 +38,7 @@ const AskQuestion = () => {
         {
           title: title,
           body: body,
-          tags: tags,
+
         },
         {
           headers: {
@@ -59,7 +58,7 @@ const AskQuestion = () => {
     <AskQuestionDiv>
       <AskQuestionHead>
         <AskQuestionHeadText>Ask a public question</AskQuestionHeadText>
-        {/* <BackGroundImg></BackGroundImg> */}
+        <BackGroundImg></BackGroundImg>
       </AskQuestionHead>
       <GoodInfoDiv>
         <GoodQuestionInfo>
@@ -121,19 +120,12 @@ const AskQuestion = () => {
             Minimum 20 characters.
           </p>
         </div>
+        <Editor />
       </ToastDiv>
-      <Editor/>
+      
       <TagDiv>
-        <div>
-          <div>Tags</div>
-          <p>
-            Add up to 5 tags to describe what your question is about. Start
-            typing to see suggestions..
-          </p>
-        </div>
-        {/* <TagInput /> */}
+        <button onClick={handleSubmit}>Submit your question</button>
       </TagDiv>
-      <button onClick={handleSubmit}>Submit your question</button>
     </AskQuestionDiv>
   );
 };
