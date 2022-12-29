@@ -1,8 +1,9 @@
 import axios from "axios";
 import { Container, MainBar, QuestionBody, SideBar } from "./style";
-import { QuestionHeader } from "../../../components/QuestionHeader/index";
+import QuestionHeader from "../../../components/QuestionHeader/index"; //여기 바꿈
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import WriteAnswer from "../../../components/AnswerLayout/WriteAnswer/index";
 
 function QuestionContent() {
   // const dispatch = useDispatch();
@@ -14,9 +15,8 @@ function QuestionContent() {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
-        console.log(res.data); //[{..},{..}] 이런형태
+        // console.log(res.data); //[{..},{..}] 이런형태
         setTestdata(res.data);
-        console.log(setTestdata);
       })
       .catch((Error) => {
         console.log(Error);
@@ -24,18 +24,17 @@ function QuestionContent() {
   }, []);
 
   return (
-    <Container>
-      <QuestionHeader testdata={testdata} />
-      <QuestionBody>
-        <MainBar>
-          {/* <ContentLayout questionId={id} testdata={testdata} />
-          {testdata.answers && (
-            <AnswerLayout answers={testdata.email} questionId={id} />
-          )} */}
-        </MainBar>
-        <SideBar>{/* <SideBarWidget /> */}</SideBar>
-      </QuestionBody>
-    </Container>
+    testdata && (
+      <Container>
+        <QuestionHeader testdata={testdata} />
+        <QuestionBody>
+          <MainBar>
+            <WriteAnswer answers={testdata.email} questionId={id} />
+          </MainBar>
+          <SideBar>{/* <SideBarWidget /> */}</SideBar>
+        </QuestionBody>
+      </Container>
+    )
   );
 }
 

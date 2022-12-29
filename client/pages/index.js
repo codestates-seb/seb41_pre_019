@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import { Inter } from '@next/font/google';
-import SignIn from './signIn';
-import Nav from '../components/Nav';
+import Head from "next/head";
+import { Inter } from "@next/font/google";
+import SignIn from "./signIn";
+import Nav from "../components/Nav";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main className="grid h-screen w-screen place-content-center bg-slate-200">
-        <div className="">환엽합니다 ^_^</div>
+        <div className="">환영합니다 ^_^</div>
       </main>
     </>
   );
