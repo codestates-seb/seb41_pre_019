@@ -14,7 +14,10 @@ const ToastEditor = ({ isEdit = false, value }) => {
   };
 
 
-  return (
+
+
+  return (<div style={{width : "720px"}}>
+
     <Editor
       useCommandShortcut={true}
       initialValue={isEdit ? value : ""}
@@ -25,6 +28,7 @@ const ToastEditor = ({ isEdit = false, value }) => {
       onChange={onChangeBody}
       autofocus={false}
     />
+    </div>
   );
 
   }
