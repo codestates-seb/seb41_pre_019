@@ -1827,14 +1827,14 @@
   dependencies:
     "@lezer/common" "^0.15.0"
 
-"@lmdb/lmdb-linux-x64@2.5.2":
-  "integrity" "sha512-xUdUfwDJLGjOUPH3BuPBt0NlIrR7f/QHKgu3GZIXswMMIihAekj2i97oI0iWG5Bok/b+OBjHPfa8IU9velnP/Q=="
-  "resolved" "https://registry.npmjs.org/@lmdb/lmdb-linux-x64/-/lmdb-linux-x64-2.5.2.tgz"
+"@lmdb/lmdb-darwin-arm64@2.5.2":
+  "integrity" "sha512-+F8ioQIUN68B4UFiIBYu0QQvgb9FmlKw2ctQMSBfW2QBrZIxz9vD9jCGqTCPqZBRbPHAS/vG1zSXnKqnS2ch/A=="
+  "resolved" "https://registry.npmjs.org/@lmdb/lmdb-darwin-arm64/-/lmdb-darwin-arm64-2.5.2.tgz"
   "version" "2.5.2"
 
-"@lmdb/lmdb-linux-x64@2.5.3":
-  "integrity" "sha512-qaReO5aV8griBDsBr8uBF/faO3ieGjY1RY4p8JvTL6Mu1ylLrTVvOONqKFlNaCwrmUjWw5jnf7VafxDAeQHTow=="
-  "resolved" "https://registry.npmjs.org/@lmdb/lmdb-linux-x64/-/lmdb-linux-x64-2.5.3.tgz"
+"@lmdb/lmdb-darwin-arm64@2.5.3":
+  "integrity" "sha512-RXwGZ/0eCqtCY8FLTM/koR60w+MXyvBUpToXiIyjOcBnC81tAlTUHrRUavCEWPI9zc9VgvpK3+cbumPyR8BSuA=="
+  "resolved" "https://registry.npmjs.org/@lmdb/lmdb-darwin-arm64/-/lmdb-darwin-arm64-2.5.3.tgz"
   "version" "2.5.3"
 
 "@mischnic/json-sourcemap@^0.1.0":
@@ -1846,9 +1846,9 @@
     "@lezer/lr" "^0.15.4"
     "json5" "^2.2.1"
 
-"@msgpackr-extract/msgpackr-extract-linux-x64@2.2.0":
-  "integrity" "sha512-94y5PJrSOqUNcFKmOl7z319FelCLAE0rz/jPCWS+UtdMZvpa4jrQd+cJPQCLp2Fes1yAW/YUQj/Di6YVT3c3Iw=="
-  "resolved" "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-linux-x64/-/msgpackr-extract-linux-x64-2.2.0.tgz"
+"@msgpackr-extract/msgpackr-extract-darwin-arm64@2.2.0":
+  "integrity" "sha512-Z9LFPzfoJi4mflGWV+rv7o7ZbMU5oAU9VmzCgL240KnqDW65Y2HFCT3MW06/ITJSnbVLacmcEJA8phywK7JinQ=="
+  "resolved" "https://registry.npmjs.org/@msgpackr-extract/msgpackr-extract-darwin-arm64/-/msgpackr-extract-darwin-arm64-2.2.0.tgz"
   "version" "2.2.0"
 
 "@next/env@13.1.0":
@@ -1868,14 +1868,9 @@
   "resolved" "https://registry.npmjs.org/@next/font/-/font-13.1.0.tgz"
   "version" "13.1.0"
 
-"@next/swc-linux-x64-gnu@13.1.0":
-  "integrity" "sha512-Tjd5gieI3X9vPce5yF+GsQxOl0jwUkyOrTR1g5PQr+bT/9Qos/yPL48H1L5ayEp0hxgLVPW7skGal7lVnAoVEQ=="
-  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.1.0.tgz"
-  "version" "13.1.0"
-
-"@next/swc-linux-x64-musl@13.1.0":
-  "integrity" "sha512-H9UMEQv40e9pkgdX4mCms0dDf2dimmZ6WXhDTWF/yIh9icgcsHaP73BJ9IFlgvh80wLiUgWZ3LAX4vXnXzidmg=="
-  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.1.0.tgz"
+"@next/swc-darwin-arm64@13.1.0":
+  "integrity" "sha512-0hUydiAW18jK2uGPnZRdnRQtdB/3ZoPo84A6zH7MJHxAWw9lzVsv3kMg9kgVBBlrivzqdNN8rdgA+eYNxzXU9w=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.1.0.tgz"
   "version" "13.1.0"
 
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
@@ -5752,6 +5747,11 @@
   "integrity" "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw=="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
+
+"fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
 
 "fstream@^1.0.12", "fstream@1.0.12":
   "integrity" "sha512-WvJ193OHa0GHPEL+AycEJgxvBEwyfRkN1vhjca23OaPVMCaLCXTd5qAu82AjTcgP1UJmytkOKb63Ypde7raDIg=="

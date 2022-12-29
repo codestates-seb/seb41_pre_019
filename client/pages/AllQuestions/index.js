@@ -50,7 +50,7 @@ const AllQuestions = () => {
       <Main>
         <div>
           <HomeHead>
-            <Search></Search>
+            {/* <Search></Search> */}
             <TopQuetionsTitle>All Questions</TopQuetionsTitle>
             <AskQuetionsButton />
           </HomeHead>

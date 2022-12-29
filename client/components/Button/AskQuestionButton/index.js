@@ -1,8 +1,13 @@
+import Link from "next/link";
 import { QuetionsButton } from "./style";
 
+//next link 씀
 function AskQuetionsButton() {
-  let to;
-  return <QuetionsButton>Ask Question</QuetionsButton>;
+  return (
+    <Link href={"/AskQuestion"}>
+      <QuetionsButton>Ask Question</QuetionsButton>
+    </Link>
+  );
 }
 
 export default AskQuetionsButton;

@@ -6,6 +6,7 @@ import store from "./redux/index";
 import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
 
+//밑에 <BrowserRouter> 추가함
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
