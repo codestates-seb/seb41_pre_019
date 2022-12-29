@@ -15,9 +15,8 @@ const ToastEditor = ({ isEdit = false, value }) => {
 
 
 
-function EditorBox() {
-  return (<div style={{width : "790px"}}>
 
+  return (<div style={{width : "720px"}}>
 
     <Editor
       useCommandShortcut={true}
@@ -33,5 +32,4 @@ function EditorBox() {
   );
 
   }
-}
-export default ToastEditor
+export default ToastEditor;
