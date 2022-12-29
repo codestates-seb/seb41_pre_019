@@ -128,7 +128,7 @@ const AskQuestion = () => {
           <div>Tags</div>
           <p>
             Add up to 5 tags to describe what your question is about. Start
-            typing to see suggestions.
+            typing to see suggestions..
           </p>
         </div>
         {/* <TagInput /> */}
