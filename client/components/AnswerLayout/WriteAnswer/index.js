@@ -41,6 +41,7 @@ function WriteAnswer() {
         initialEditType="WYSIWYG"
         useCommandShortcut={true}
         autofocus={false}
+        
       ></Editor>
 
       <ButtonContainer>

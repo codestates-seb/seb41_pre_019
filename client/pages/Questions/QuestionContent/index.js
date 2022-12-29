@@ -1,8 +1,10 @@
 import axios from "axios";
 import { Container, MainBar, QuestionBody, SideBar } from "./style";
-import { QuestionHeader } from "../../../components/QuestionHeader/index";
+import  QuestionHeader  from "../../../components/QuestionHeader/index";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import WriteAnswer from "../../../components/AnswerLayout/WriteAnswer/index"
+
 
 function QuestionContent() {
   // const dispatch = useDispatch();
@@ -24,18 +26,17 @@ function QuestionContent() {
   }, []);
 
   return (
+    testdata && (
     <Container>
       <QuestionHeader testdata={testdata} />
       <QuestionBody>
         <MainBar>
-          {/* <ContentLayout questionId={id} testdata={testdata} />
-          {testdata.answers && (
-            <AnswerLayout answers={testdata.email} questionId={id} />
-          )} */}
+            <WriteAnswer answers={testdata.answers} questionId={id} />
         </MainBar>
         <SideBar>{/* <SideBarWidget /> */}</SideBar>
       </QuestionBody>
     </Container>
+    )
   );
 }
 
