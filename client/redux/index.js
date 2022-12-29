@@ -31,6 +31,13 @@ export const askTagsAction = (res) => {
   };
 };
 
+export const askBodyAction = (res) => {
+  return {
+    type: "BODY",
+    payload: res,
+  };
+};
+
 const askReducer = (state = initialstate, action) => {
   switch (action.type) {
     case "TITLE":
@@ -43,11 +50,7 @@ const askReducer = (state = initialstate, action) => {
         ...state,
         body: action.payload,
       };
-    case "TAGS":
-      return {
-        ...state,
-        tags: action.payload,
-      };
+
     default:
       return state;
   }
@@ -57,7 +60,7 @@ const combinedReducer = combineReducers({
   // loginReducer,
   // questionReducer,
   searchReducer,
-  // askReducer,
+   askReducer,
 });
 
 const store = createStore(combinedReducer);
