@@ -19,8 +19,6 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    // TODO 비즈니스 로직 구현
-
     // 회원가입, 추후 추가 정보(지역 등) 등록 구현할 것
     public User createUser(User user){
         verifyExistsEmail(user.getEmail());
@@ -48,7 +46,7 @@ public class UserService {
         Optional.ofNullable(user.getPassword())
                 .ifPresent(password -> findUser.setPassword(password));
         Optional.ofNullable(user.getName())
-                .ifPresent(name -> findUser.setEmail(name));
+                .ifPresent(name -> findUser.setName(name));
 
         return userRepository.save(findUser);
     }
@@ -65,7 +63,7 @@ public class UserService {
     }
 
     // 사용자를 userId로 조회
-    private User findVerifiedUser(long userId) {
+    public User findVerifiedUser(long userId) {
         Optional<User> optionalUser = userRepository.findById(userId);
         User user =
                 optionalUser.orElseThrow(()->

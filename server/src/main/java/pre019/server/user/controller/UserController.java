@@ -33,8 +33,7 @@ public class UserController {
     @PostMapping("/join")
     public ResponseEntity joinUser(@Valid @RequestBody UserPostDto userPostDto){
         //TODO 회원가입
-        User user = mapper.userPostDtoToUser(userPostDto);
-        userService.createUser(user);
+        User user = userService.createUser(mapper.userPostDtoToUser(userPostDto));
         return new ResponseEntity(mapper.userToUserResponseDto(user), HttpStatus.CREATED);
     }
 
