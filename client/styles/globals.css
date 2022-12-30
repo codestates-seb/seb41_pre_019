@@ -112,3 +112,116 @@ img, video {
   border-color: #ffffff; 
   background-color:  #d6d9dc;
 }
+.signin001{
+  width: 100vw; 
+height: 100vh; 
+}
+.signin002{display: flex; 
+  padding-top: 3rem;
+  padding-bottom: 3rem; 
+  flex-direction: column; 
+  justify-content: center; 
+  min-height: 100%; 
+
+}
+.signin003{margin-left: auto;
+  margin-right: auto; 
+  width: 100%; 
+  max-width: 28rem; 
+}
+.signin004{margin-top: 1.5rem; 
+  color: #111827; 
+  font-size: 1.875rem;
+  line-height: 2.25rem; 
+  font-weight: 700; 
+  letter-spacing: -0.025em; 
+  text-align: center; 
+}
+.signin005{
+  margin-left: auto;
+margin-right: auto; 
+margin-top: 2rem; 
+width: 100%; 
+max-width: 28rem; 
+}
+.signin006{
+  padding-left: 1rem;
+padding-right: 1rem; 
+padding-top: 2rem;
+padding-bottom: 2rem; 
+padding-left: 2.5rem;
+padding-right: 2.5rem; 
+background-color: #ffffff; 
+border-radius: 0.5rem; 
+box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); 
+}
+.signform001{
+  margin-top: 1.5rem; 
+}
+.signin007{
+  display: block; 
+color: #374151; 
+font-size: 0.875rem;
+line-height: 1.25rem; 
+font-weight: 500; 
+}
+.signin008{
+  margin-top: 0.25rem; 
+}
+.signin009{
+  display: block; 
+padding-top: 0.5rem;
+padding-bottom: 0.5rem; 
+padding-left: 0.75rem;
+padding-right: 0.75rem; 
+font-size: 0.875rem;
+line-height: 1.25rem; 
+color: #9CA3AF; 
+width: 100%; 
+border-radius: 0.375rem; 
+border-width: 1px; 
+border-color: #D1D5DB; 
+appearance: none; 
+}
+.signin010{
+  display: block; 
+color: #374151; 
+font-size: 0.875rem;
+line-height: 1.25rem; 
+font-weight: 500; 
+}
+.signin011{
+  margin-top: 0.25rem; 
+}
+.signin012{
+  display: block; 
+padding-top: 0.5rem;
+padding-bottom: 0.5rem; 
+padding-left: 0.75rem;
+padding-right: 0.75rem; 
+font-size: 0.875rem;
+line-height: 1.25rem; 
+color: #9CA3AF; 
+width: 100%; 
+border-radius: 0.375rem; 
+border-width: 1px; 
+border-color: #D1D5DB; 
+appearance: none; 
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
+}
+.sign013{display: flex; 
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+  padding-left: 1rem;
+  padding-right: 1rem; 
+  background-color: #4F46E5; 
+  color: #ffffff; 
+  font-size: 0.875rem;
+  line-height: 1.25rem; 
+  font-weight: 500; 
+  justify-content: center; 
+  width: 100%; 
+  border-radius: 0.375rem; 
+  border-width: 1px; 
+  border-color: transparent; 
+}
