@@ -39,4 +39,8 @@ public class Question extends Auditable {
     private String content;
 
     private int vote;
+
+    public Question(Long questionId) {
+        this.questionId = questionId;
+    }
 }
