@@ -1,9 +1,10 @@
 import axios from "axios";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { askTagsAction } from "../../redux";
-import Editor from "../../components/ToastEditor";
+// import Editor from "../../components/ToastEditor";
 import {
   AskQuestionDiv,
   AskQuestionHead,
@@ -20,6 +21,10 @@ import {
 } from "./style";
 
 const URL = process.env.REACT_APP_API_URL;
+
+const Editor = dynamic(() => import("../../components/ToastEditor/index"), {
+  ssr: false,
+});
 
 const AskQuestion = () => {
   const router = useRouter();
