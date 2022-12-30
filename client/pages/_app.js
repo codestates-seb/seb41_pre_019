@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 
 import store from "../redux/index";
 import Nav from "../components/Nav";
+import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
@@ -9,8 +10,8 @@ export default function App({ Component, pageProps }) {
     <Provider store={store}>
       <Nav />
       <div class="Container" style={{ display: "flex" }}>
-        <div style={{ width: "600px" }}></div>
-        {/* <Sidebar></Sidebar> */}'
+        <div style={{ width: "10%" }}></div>
+        <Sidebar></Sidebar>
         <Component {...pageProps} />
       </div>
     </Provider>
