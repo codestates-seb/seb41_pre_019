@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-
+import Footer from "../components/Layout/Footer";
 import store from "../redux/index";
 import Nav from "../components/Nav";
 import "../styles/globals.css";
@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
         {/* <Sidebar></Sidebar> */}'
         <Component {...pageProps} />
       </div>
+      <Footer />
     </Provider>
   );
 }
