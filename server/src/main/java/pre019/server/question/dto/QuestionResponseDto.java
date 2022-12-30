@@ -3,6 +3,7 @@ package pre019.server.question.dto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import pre019.server.answer.dto.AnswerResponseDto;
 
 import java.time.LocalDateTime;
 
@@ -17,5 +18,4 @@ public class QuestionResponseDto {
     private int vote;
     private LocalDateTime createdAt;
 
-//  private List<Tag> questionTags;
 }
