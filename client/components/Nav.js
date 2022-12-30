@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import authStore from "../store/auth";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
+// import Search from "../components/Layout/Search/index";
 
 export default function Example() {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function Example() {
           onClick={() => router.push("/")}
           className="rounded-xl border border-white p-2 text-xl"
         >
-          <img src = "http://www.ranklogos.com/wp-content/uploads/2015/06/Stack-Overflow-Logo.png"></img>
+          <img src="http://www.ranklogos.com/wp-content/uploads/2015/06/Stack-Overflow-Logo.png"></img>
         </button>
 
         <form className="w-full sm:max-w-3xl">
@@ -30,6 +31,7 @@ export default function Example() {
                 aria-hidden="true"
               />
             </div>
+            {/* <Search></Search> */}
             <input
               id="search"
               name="search"

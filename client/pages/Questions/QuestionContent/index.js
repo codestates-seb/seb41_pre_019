@@ -3,7 +3,8 @@ import { Container, MainBar, QuestionBody, SideBar } from "./style";
 import QuestionHeader from "../../../components/QuestionHeader/index"; //여기 바꿈
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import WriteAnswer from "../../../components/AnswerLayout/WriteAnswer/index";
+// import Editor from "../../../components/ToastEditor/index";
+import WriteAnswer from "../../../components/AnswerLayout/WriteAnswer";
 
 function QuestionContent() {
   // const dispatch = useDispatch();
@@ -29,7 +30,9 @@ function QuestionContent() {
         <QuestionHeader testdata={testdata} />
         <QuestionBody>
           <MainBar>
-            <WriteAnswer answers={testdata.email} questionId={id} />
+            {/* <Editor></Editor> */}
+            <WriteAnswer />
+            {testdata.id && <WriteAnswer />}
           </MainBar>
           <SideBar>{/* <SideBarWidget /> */}</SideBar>
         </QuestionBody>
