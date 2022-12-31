@@ -38,14 +38,20 @@ public class AnswerController {
 
     @PatchMapping("/{answer-id}")
     public ResponseEntity patchAnswer(@PathVariable("question-id") long questionId,
+                                      @PathVariable("answer-id") long answerId,
                                       @RequestBody AnswerPatchDto answerPatchDto) {
         // TODO 답변 수정
-        return new ResponseEntity(HttpStatus.OK);
+        answerPatchDto.setAnswerId(answerId);
+        answerPatchDto.setQuestionId(answerId);
+
+        Answer answer = answerService.updateAnswer(mapper.answerPatchDtoToAnswer(answerPatchDto));
+        return new ResponseEntity(mapper.answerToAnswerResponseDto(answer),HttpStatus.OK);
     }
 
     @DeleteMapping("/{answer-id}")
     public ResponseEntity deleteAnswer(@PathVariable("question-id") long questionId) {
         // TODO 답변 삭제
+        answerService.deleteAnswer(questionId);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 }
