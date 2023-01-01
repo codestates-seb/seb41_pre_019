@@ -36,6 +36,7 @@ export default function Example() {
               placeholder="Search..."
               type="search"
               onChange={(e) => setSearch(e.target.value)}
+              
             />
           </div>
           <button

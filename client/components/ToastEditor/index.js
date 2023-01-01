@@ -20,7 +20,11 @@ const ToastEditor = ({ isEdit = false, value }) => {
 
     <Editor
       useCommandShortcut={true}
+
+      initialValue={isEdit ? value : " "}
+
       initialValue={" "}
+
       ref={editorRef}
       previewStyle="vertical"
       height="300px"
