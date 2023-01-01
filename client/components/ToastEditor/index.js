@@ -14,10 +14,17 @@ const ToastEditor = ({ isEdit = false, value }) => {
   };
 
 
-  return (
+
+
+  return (<div style={{width : "720px"}}>
+
     <Editor
       useCommandShortcut={true}
-      initialValue={isEdit ? value : ""}
+
+      initialValue={isEdit ? value : " "}
+
+      initialValue={" "}
+
       ref={editorRef}
       previewStyle="vertical"
       height="300px"
@@ -25,6 +32,7 @@ const ToastEditor = ({ isEdit = false, value }) => {
       onChange={onChangeBody}
       autofocus={false}
     />
+    </div>
   );
 
   }

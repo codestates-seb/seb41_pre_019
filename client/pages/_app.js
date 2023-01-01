@@ -1,17 +1,20 @@
 import { Provider } from "react-redux";
-
+import Footer from "../components/Layout/Footer";
 import store from "../redux/index";
 import Nav from "../components/Nav";
+import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";
-import QuestionContent from "./Questions/QuestionContent";
-
-
 
 export default function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Nav />
-      <Component {...pageProps} />
+      <div class="Container" style={{ display: "flex" }}>
+        <div style={{ width: "10%" }}></div>
+        <Sidebar></Sidebar>
+        <Component {...pageProps} />
+      </div>
+      <Footer />
     </Provider>
   );
 }
