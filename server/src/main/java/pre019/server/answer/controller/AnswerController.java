@@ -42,7 +42,7 @@ public class AnswerController {
                                       @RequestBody AnswerPatchDto answerPatchDto) {
         // TODO 답변 수정
         answerPatchDto.setAnswerId(answerId);
-        answerPatchDto.setQuestionId(answerId);
+        answerPatchDto.setQuestionId(questionId);
 
         Answer answer = answerService.updateAnswer(mapper.answerPatchDtoToAnswer(answerPatchDto));
         return new ResponseEntity(mapper.answerToAnswerResponseDto(answer),HttpStatus.OK);

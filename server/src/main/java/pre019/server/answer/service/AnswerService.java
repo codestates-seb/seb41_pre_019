@@ -40,11 +40,11 @@ public class AnswerService {
     public Answer updateAnswer(Answer answer) {
         Answer findAnswer = findVerifiedAnswer(answer.getAnswerId());
         Optional.ofNullable(answer.getContent())
-                .ifPresent(content -> answer.setContent(content));
+                .ifPresent(content -> findAnswer.setContent(content));
         Optional.ofNullable(answer.getVote())
-                .ifPresent(vote -> answer.setVote(vote));
+                .ifPresent(vote -> findAnswer.setVote(vote));
 
-        return answerRepository.save(answer);
+        return answerRepository.save(findAnswer);
     }
 
     public void deleteAnswer(long answerId) {
