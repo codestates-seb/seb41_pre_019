@@ -3,6 +3,7 @@ package pre019.server.question.service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import pre019.server.answer.repository.AnswerRepository;
 import pre019.server.exception.BusinessLogicException;
 import pre019.server.exception.ExceptionCode;
 import pre019.server.question.entity.Question;
@@ -16,10 +17,12 @@ import java.util.Optional;
 public class QuestionService {
 
     private final QuestionRepository questionRepository;
+    private final AnswerRepository answerRepository;
     private final UserService userService;
     
-    public QuestionService(QuestionRepository questionRepository, UserService userService) {
+    public QuestionService(QuestionRepository questionRepository, UserService userService, AnswerRepository answerRepository) {
         this.questionRepository = questionRepository;
+        this.answerRepository = answerRepository;
         this.userService = userService;
     }
 
@@ -44,7 +47,8 @@ public class QuestionService {
 
     public Question findQuestion(long questionId) {
         // TODO 해당 id의 question이 있는지 검증
-        return findVerifiedQuestion(questionId);
+        Question question = findVerifiedQuestion(questionId);
+        return question;
     }
 
     public Page<Question> findQuestions(int page, int size) {
@@ -58,7 +62,7 @@ public class QuestionService {
         questionRepository.delete(findQuestion);
     }
 
-    private Question findVerifiedQuestion(long questionId) {
+    public Question findVerifiedQuestion(long questionId) {
         // TODO questionId에 해당하는 질문이 있는지 검증
         Optional<Question> optionalQuestion = questionRepository.findById(questionId);
         Question findQuestion =

@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
+import pre019.server.answer.dto.AnswerResponseDto;
 import pre019.server.question.dto.QuestionPatchDto;
 import pre019.server.question.dto.QuestionPostDto;
 import pre019.server.question.dto.QuestionResponseDto;
@@ -55,7 +56,8 @@ public class QuestionMapper {
             vote = question.getVote();
             String username = question.getUser().getName();
             LocalDateTime createdAt = question.getCreateAt();
-            QuestionResponseDto questionResponseDto = new QuestionResponseDto(questionId, title, content, username, vote, (LocalDateTime)createdAt);
+            QuestionResponseDto questionResponseDto =
+                    new QuestionResponseDto(questionId, title, content, username, vote, (LocalDateTime)createdAt);
             return questionResponseDto;
         }
     }
@@ -75,4 +77,5 @@ public class QuestionMapper {
             return list;
         }
     }
+
 }
