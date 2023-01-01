@@ -88,3 +88,9 @@ export const Paragraph = styled.div`
   margin-top: auto;
   margin-bottom: 24px;
 `;
+
+export const ImgBox = styled.div`
+  position: relative;
+  height: 52px;
+  width: 52px;
+`;
