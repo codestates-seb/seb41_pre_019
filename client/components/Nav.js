@@ -33,7 +33,7 @@ export default function Example() {
               id="search"
               name="search"
               className="search-input"
-              placeholder="Search"
+              placeholder="Search..."
               type="search"
               onChange={(e) => setSearch(e.target.value)}
             />
