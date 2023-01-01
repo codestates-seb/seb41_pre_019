@@ -1,4 +1,6 @@
 import logo from "../../../assets/Stack_Overflow_icon.svg.png";
+import Image from "next/image";
+
 import {
   Categories,
   Category,
@@ -13,6 +15,7 @@ import {
   Paragraph,
   Sns,
   SnsContainer,
+  ImgBox
 } from "./style";
 
 function Footer() {
@@ -20,7 +23,11 @@ function Footer() {
     <FooterContainer>
       <Container>
         <LogoContainer>
-          <Logo src={logo} />
+          <ImgBox>
+            
+            <Image src={logo} priority={true} layout="fill" />
+          </ImgBox>
+          
         </LogoContainer>
         <Categories>
           <Category>
