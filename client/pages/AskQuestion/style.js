@@ -62,7 +62,7 @@ export const GoodQuestionInfo = styled.div`
 
 export const GoodTitleInfo = styled.div`
   margin-top: 30px;
-  box-shadow: 2px 2px 2px gray;
+  
   border-radius: 3px;
   border: 1px solid #d6d9dc;
   height: 140px;
@@ -73,7 +73,7 @@ export const GoodTitleHead = styled.div`
   font-size: 16px;
   padding: 13px 0 0 15px;
   border-bottom: 1px solid #d6d9dc;
-  height: 50px;
+  height: 30px;
 `;
 
 export const GoodTitleInfoText = styled.div`
@@ -88,8 +88,8 @@ export const GoodTitleInfoText = styled.div`
 `;
 
 export const InputTitleDiv = styled.div`
-  width: 790px;
-  margin-top: 30px;
+  width: 758px;
+  margin-top: 85px;
   border-radius: 3px;
   border: 1px solid #d6d9dc;
   padding: 35px 0 35px 30px;
@@ -113,7 +113,7 @@ export const InputTitleDiv = styled.div`
 `;
 
 export const ToastDiv = styled.div`
-  width: 790px;
+  width: 724px;
   margin-top: 30px;
   border-radius: 3px;
   border: 1px solid #d6d9dc;

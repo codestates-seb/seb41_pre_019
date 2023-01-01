@@ -33,7 +33,11 @@ const AskQuestion = () => {
 
   useEffect(() => {
     dispatch(askTagsAction([]));
-  });
+  }, []);
+
+    const body = useSelector((state) => state.askReducer.body);
+
+
 
   function handleSubmit() {
     let title = titleInputValue.current.value;
@@ -43,7 +47,6 @@ const AskQuestion = () => {
         {
           title: title,
           body: body,
-
         },
         {
           headers: {
