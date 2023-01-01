@@ -20,13 +20,13 @@ export default function Example() {
           <img src="http://www.ranklogos.com/wp-content/uploads/2015/06/Stack-Overflow-Logo.png"></img>
         </button>
 
-        <form className="w-full sm:max-w-3xl" style={{"padding-top": "10px", "width": "30%"}}>
+        <form
+          className="w-full sm:max-w-3xl"
+          style={{ "padding-top": "10px", width: "30%" }}
+        >
           <div className="relative">
             <div className="relative-1">
-              <MagnifyingGlassIcon
-                className="relative-2"
-                aria-hidden="true"
-              />
+              <MagnifyingGlassIcon className="relative-2" aria-hidden="true" />
             </div>
             {/* <Search></Search> */}
             <input
@@ -40,7 +40,7 @@ export default function Example() {
           </div>
           <button
             className="hidden"
-            style={{"display": "none"}}
+            style={{ display: "none" }}
             onClick={(e) => {
               e.preventDefault();
               router.push(`/AllQuestions?search=${search}`);
