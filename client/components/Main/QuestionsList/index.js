@@ -6,9 +6,11 @@ const Container = styled.div`
 `;
 //pages / AllQuetions에서 homeData 가져옴
 const QuestionsList = ({ homeData }) => {
+  console.log("QuestionsList", homeData);
   return (
     <Container>
-      {homeData && homeData.map((el) => <Question key={el.id} list={el} />)}
+      {homeData &&
+        homeData.data.map((el) => <Question key={el.questionId} list={el} />)}
     </Container>
   );
 };

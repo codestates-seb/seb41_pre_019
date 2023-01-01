@@ -9,7 +9,7 @@ import {
   Header,
   NeedLogin,
 } from "../../components/AnswerLayout/WriteAnswer/style";
-const URL = "https://jsonplaceholder.typicode.com/users";
+const URL = "http://15.164.124.113:8080";
 
 function TestUi() {
   // const { id } = useParams();
@@ -18,17 +18,10 @@ function TestUi() {
   const handlePostAnswer = () => {
     const markdownValue = editorRef.current.getInstance().getMarkdown();
     axios
-      .post(
-        URL,
-        {
-          contents: markdownValue,
-        },
-        {
-          headers: {
-            Authorization: localStorage.getItem("accesstoken"),
-          },
-        }
-      )
+      .post(`${URL}/questions?userId=1`, {
+        title: "테스트 용도",
+        content: "테스트 내용",
+      })
       .then((res) => {
         if (res.status >= 200 && res.status < 300) {
           location.reload();

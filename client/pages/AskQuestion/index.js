@@ -17,10 +17,10 @@ import {
   GoodTitleInfoText,
   InputTitleDiv,
   ToastDiv,
-  TagDiv
+  TagDiv,
 } from "./style";
 
-const URL = process.env.REACT_APP_API_URL;
+const URL = "http://15.164.124.113:8080";
 
 const Editor = dynamic(() => import("../../components/ToastEditor/index"), {
   ssr: false,
@@ -39,11 +39,10 @@ const AskQuestion = () => {
     let title = titleInputValue.current.value;
     axios
       .post(
-        `${URL}/api/questions`,
+        `${URL}/questions`,
         {
           title: title,
           body: body,
-
         },
         {
           headers: {
@@ -127,7 +126,7 @@ const AskQuestion = () => {
         </div>
         <Editor />
       </ToastDiv>
-      
+
       <TagDiv>
         <button onClick={handleSubmit}>Submit your question</button>
       </TagDiv>
