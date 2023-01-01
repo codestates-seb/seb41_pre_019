@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 // import Editor from "../../../components/ToastEditor/index";
 import WriteAnswer from "../../../components/AnswerLayout/WriteAnswer";
+import AnswerLayout from "../../../components/AnswerLayout/index";
 
 function QuestionContent() {
   // const dispatch = useDispatch();
@@ -30,11 +31,13 @@ function QuestionContent() {
         <QuestionHeader testdata={testdata} />
         <QuestionBody>
           <MainBar>
-            {/* <Editor></Editor> */}
-            <WriteAnswer />
-            {testdata.id && <WriteAnswer />}
+            {/* <WriteAnswer />
+            {testdata.id && <WriteAnswer />} */}
+            {testdata.username && (
+              <AnswerLayout answers={testdata.username} questionId={id} />
+            )}
           </MainBar>
-          <SideBar>{/* <SideBarWidget /> */}</SideBar>
+          <SideBar></SideBar>
         </QuestionBody>
       </Container>
     )

@@ -110,7 +110,6 @@ export const InputTitleDiv = styled.div`
     border-radius: 3px;
     padding-left: 8px;
   }
-
 `;
 
 export const ToastDiv = styled.div`
@@ -132,7 +131,6 @@ export const ToastDiv = styled.div`
 `;
 
 export const TagDiv = styled.div`
-  
   button {
     margin-top: 8px;
     position: relative;

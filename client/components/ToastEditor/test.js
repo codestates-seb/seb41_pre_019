@@ -12,6 +12,7 @@ import {
 const URL = "https://jsonplaceholder.typicode.com/users";
 
 function TestUi() {
+  // const { id } = useParams();
   let editorRef = useRef();
 
   const handlePostAnswer = () => {

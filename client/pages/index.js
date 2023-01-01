@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main className="grid h-screen w-screen place-content-center bg-slate-200">
-        <div className="">환영합니다 ^_^</div>
+        <div className=""></div>
       </main>
     </>
   );

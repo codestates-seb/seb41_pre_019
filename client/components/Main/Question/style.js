@@ -90,6 +90,11 @@ export const InfoBox = styled.div`
   display: flex;
   column-gap: 6px;
 `;
+export const ImgBox = styled.div`
+  position: relative;
+  height: 16px;
+  width: 16px;
+`;
 
 export const UserImg = styled.img`
   width: 16px;

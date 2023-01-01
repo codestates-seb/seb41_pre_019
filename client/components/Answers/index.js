@@ -1,17 +1,19 @@
-import ContentLayout from "../../ContentLayout";
+// import ContentLayout from "../../ContentLayout";
 import { Answer, Container } from "./style";
+import ContentLayout from "../ContentLayout";
 
 function Answers({ questionId, answers }) {
+  console.log("Answers", questionId, answers);
   return (
     <Container>
       {answers &&
         answers.map((answer) => (
-          <Answer key={answer.answerId}>
+          <Answer key={answer.id}>
             <ContentLayout
-              key={answer.answerId}
+              key={answer.id}
               testdata={answer}
               questionId={questionId}
-              answerId={answer.answerId}
+              answerId={answer.id}
             />
           </Answer>
         ))}

@@ -1,9 +1,13 @@
-import userimg from "../../../assets/images/loopy.jpeg";
+import Link from "next/link";
+import Image from "next/image";
+import User from "../../../assets/images/loopy.png";
+//import userimg from "../../../assets/images/loopy.png";
 import { toDateFormatOfUS } from "../../../util/toDateFormatOfUS";
 import Tag from "../../Tag";
 import {
   AnswerCount,
   CountBox,
+  ImgBox,
   InfoBox,
   InfoName,
   LastName,
@@ -41,7 +45,12 @@ const Question = ({ list }) => {
         </LeftSection>
         <RightSection>
           <TextSection>
-            <QuestionTitle>{list.email}</QuestionTitle>
+            <Link
+              href={"/Questions/QuestionContent"}
+              style={{ textDecoration: "none" }}
+            >
+              <QuestionTitle>{list.email}</QuestionTitle>
+            </Link>
             <QuestionText>{list.name}</QuestionText>
           </TextSection>
           <TagInFooter>
@@ -49,7 +58,10 @@ const Question = ({ list }) => {
               <Tag></Tag>
             </TagBox>
             <InfoBox>
-              <UserImg src={userimg}></UserImg>
+              <ImgBox>
+               {/* {next.js는 부모요소의 크기를 정해 layout="fill"속성을 줘야함} */}
+                <Image src={User} priority={true} layout="fill" />
+              </ImgBox>
               <InfoName>{list.address.city}</InfoName>
               <LastName>
                 <span>{`asked ${toDateFormatOfUS(new Date(list.id))}`}</span>

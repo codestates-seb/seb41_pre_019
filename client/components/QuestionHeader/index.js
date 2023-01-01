@@ -11,6 +11,9 @@ import {
 } from "./style";
 
 function QuestionHeader({ testdata }) {
+  console.log("QuestionHeader", testdata);
+  // let asked = toDateFormatOfUS(new Date(testdata.id));
+  //  <span>{`asked ${toDateFormatOfUS(new Date(list.id))}`}</span>
   return (
     testdata && (
       <Container>
