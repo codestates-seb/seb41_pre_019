@@ -15,7 +15,7 @@
 <br><br>
 
 ## ER-Diagram
-<p align="center">![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fc5ec61c-db5f-4cf3-926f-80973564a361/Untitled.png)</p>
+<p align="center"></p>
 
 <br><br>
 
