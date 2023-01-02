@@ -26,14 +26,14 @@ import {
 } from "./style";
 
 const Question = ({ list }) => {
-  // console.log(list);
+  console.log("Question", list);
   return (
     <QuBox>
       <QuList>
         <LeftSection>
           <CountBox>
             <VotesCount>
-              <span>{list.id} votes &nbsp;</span>
+              <span>{list.vote} votes &nbsp;</span>
             </VotesCount>
             <AnswerCount>
               <span>3 answers&nbsp;</span>
@@ -49,9 +49,9 @@ const Question = ({ list }) => {
               href={"/Questions/QuestionContent"}
               style={{ textDecoration: "none" }}
             >
-              <QuestionTitle>{list.email}</QuestionTitle>
+              <QuestionTitle>{list.title}</QuestionTitle>
             </Link>
-            <QuestionText>{list.name}</QuestionText>
+            <QuestionText>{list.content}</QuestionText>
           </TextSection>
           <TagInFooter>
             <TagBox>
@@ -59,12 +59,14 @@ const Question = ({ list }) => {
             </TagBox>
             <InfoBox>
               <ImgBox>
-               {/* {next.js는 부모요소의 크기를 정해 layout="fill"속성을 줘야함} */}
+                {/* {next.js는 부모요소의 크기를 정해 layout="fill"속성을 줘야함} */}
                 <Image src={User} priority={true} layout="fill" />
               </ImgBox>
-              <InfoName>{list.address.city}</InfoName>
+              <InfoName>{list.username}</InfoName>
               <LastName>
-                <span>{`asked ${toDateFormatOfUS(new Date(list.id))}`}</span>
+                <span>{`asked ${toDateFormatOfUS(
+                  new Date(list.createdAt)
+                )}`}</span>
               </LastName>
             </InfoBox>
           </TagInFooter>
