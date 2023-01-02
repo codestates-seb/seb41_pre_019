@@ -33,16 +33,20 @@ const AskQuestion = () => {
 
   useEffect(() => {
     dispatch(askTagsAction([]));
-  });
+  }, []);
+
+    const content = useSelector((state) => state.askReducer.content);
+
+
 
   function handleSubmit() {
     let title = titleInputValue.current.value;
     axios
       .post(
-        `${URL}/questions`,
+        `${URL}/questions?userId=2`,
         {
           title: title,
-          body: body,
+          content: content,
         },
         {
           headers: {
@@ -52,7 +56,7 @@ const AskQuestion = () => {
       )
       .then((res) => {
         if (res.status >= 200 && res.status < 300) {
-          router.push(`/questions/${res.data.postId}`);
+          router.push(`/questions/${res.data.post}`);
         }
       })
       .catch((error) => console.log(error));
