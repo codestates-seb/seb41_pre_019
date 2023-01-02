@@ -35,7 +35,7 @@
 
 
 ### Back-end
-<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://camo.githubusercontent.com/49befa32300e8d3f71282963743f863d1eed0856ff4073fbcff0f25675912db5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f537072696e672053656375726974792d3644423333463f7374796c653d666f722d7468652d6261646765266c6f676f3d537072696e67205365637572697479266c6f676f436f6c6f723d7768697465"> <img src="https://camo.githubusercontent.com/ef6c19e247d89935d87fb7ea73b33f638e108fd495b65b5efd9e828bc1f36455/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f537072696e672044617461204a50412d3041424635333f7374796c653d666f722d7468652d6261646765"> <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
+<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://camo.githubusercontent.com/ef6c19e247d89935d87fb7ea73b33f638e108fd495b65b5efd9e828bc1f36455/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f537072696e672044617461204a50412d3041424635333f7374796c653d666f722d7468652d6261646765"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
 
 
 <br><br>
