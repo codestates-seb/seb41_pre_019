@@ -33,7 +33,7 @@ export const askTagsAction = (res) => {
 
 export const askBodyAction = (res) => {
   return {
-    type: "BODY",
+    type: "CONTENT",
     payload: res,
   };
 };
@@ -45,10 +45,10 @@ const askReducer = (state = initialstate, action) => {
         ...state,
         title: action.payload,
       };
-    case "BODY":
+    case "CONTENT":
       return {
         ...state,
-        body: action.payload,
+        content: action.payload,
       };
 
     default:

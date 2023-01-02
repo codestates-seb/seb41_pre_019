@@ -35,7 +35,7 @@ const AskQuestion = () => {
     dispatch(askTagsAction([]));
   }, []);
 
-    const body = useSelector((state) => state.askReducer.body);
+    const content = useSelector((state) => state.askReducer.content);
 
 
 
@@ -43,10 +43,10 @@ const AskQuestion = () => {
     let title = titleInputValue.current.value;
     axios
       .post(
-        `${URL}/questions`,
+        `${URL}/questions?userId=2`,
         {
           title: title,
-          body: body,
+          content: content,
         },
         {
           headers: {
@@ -56,7 +56,7 @@ const AskQuestion = () => {
       )
       .then((res) => {
         if (res.status >= 200 && res.status < 300) {
-          router.push(`/questions/${res.data.postId}`);
+          router.push(`/questions/${res.data.post}`);
         }
       })
       .catch((error) => console.log(error));
