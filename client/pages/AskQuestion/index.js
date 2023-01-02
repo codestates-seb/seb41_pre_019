@@ -17,10 +17,10 @@ import {
   GoodTitleInfoText,
   InputTitleDiv,
   ToastDiv,
-  TagDiv
+  TagDiv,
 } from "./style";
 
-const URL = process.env.REACT_APP_API_URL;
+const URL = "http://15.164.124.113:8080";
 
 const Editor = dynamic(() => import("../../components/ToastEditor/index"), {
   ssr: false,
@@ -33,17 +33,18 @@ const AskQuestion = () => {
 
   useEffect(() => {
     dispatch(askTagsAction([]));
-  });
+  }, []);
+
+  const content = useSelector((state) => state.askReducer.content);
 
   function handleSubmit() {
     let title = titleInputValue.current.value;
     axios
       .post(
-        `${URL}/api/questions`,
+        `${URL}/questions?userId=2`,
         {
           title: title,
-          body: body,
-
+          content: content,
         },
         {
           headers: {
@@ -53,7 +54,7 @@ const AskQuestion = () => {
       )
       .then((res) => {
         if (res.status >= 200 && res.status < 300) {
-          router.push(`/questions/${res.data.postId}`);
+          router.push(`/questions/${res.data.post}`);
         }
       })
       .catch((error) => console.log(error));
@@ -127,7 +128,7 @@ const AskQuestion = () => {
         </div>
         <Editor />
       </ToastDiv>
-      
+
       <TagDiv>
         <button onClick={handleSubmit}>Submit your question</button>
       </TagDiv>

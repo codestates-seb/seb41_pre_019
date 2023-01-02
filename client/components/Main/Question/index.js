@@ -1,9 +1,13 @@
-import userimg from "../../../assets/images/loopy.jpeg";
+import Link from "next/link";
+import Image from "next/image";
+import User from "../../../assets/images/loopy.png";
+//import userimg from "../../../assets/images/loopy.png";
 import { toDateFormatOfUS } from "../../../util/toDateFormatOfUS";
 import Tag from "../../Tag";
 import {
   AnswerCount,
   CountBox,
+  ImgBox,
   InfoBox,
   InfoName,
   LastName,
@@ -22,17 +26,17 @@ import {
 } from "./style";
 
 const Question = ({ list }) => {
-  // console.log(list);
+  console.log("Question", list);
   return (
     <QuBox>
       <QuList>
         <LeftSection>
           <CountBox>
             <VotesCount>
-              <span>{list.id} votes &nbsp;</span>
+              <span>{list.vote} votes &nbsp;</span>
             </VotesCount>
             <AnswerCount>
-              <span>3 answers&nbsp;</span>
+              <span> answers&nbsp;</span>
             </AnswerCount>
             <ViewsCount>
               <span>0 views</span>
@@ -41,18 +45,28 @@ const Question = ({ list }) => {
         </LeftSection>
         <RightSection>
           <TextSection>
-            <QuestionTitle>{list.email}</QuestionTitle>
-            <QuestionText>{list.name}</QuestionText>
+            <Link
+              href={"/Questions/QuestionContent"}
+              style={{ textDecoration: "none" }}
+            >
+              <QuestionTitle>{list.title}</QuestionTitle>
+            </Link>
+            <QuestionText>{list.content}</QuestionText>
           </TextSection>
           <TagInFooter>
             <TagBox>
               <Tag></Tag>
             </TagBox>
             <InfoBox>
-              <UserImg src={userimg}></UserImg>
-              <InfoName>{list.address.city}</InfoName>
+              <ImgBox>
+                {/* {next.js는 부모요소의 크기를 정해 layout="fill"속성을 줘야함} */}
+                <Image src={User} priority={true} layout="fill" />
+              </ImgBox>
+              <InfoName>{list.username}</InfoName>
               <LastName>
-                <span>{`asked ${toDateFormatOfUS(new Date(list.id))}`}</span>
+                <span>{`asked ${toDateFormatOfUS(
+                  new Date(list.createdAt)
+                )}`}</span>
               </LastName>
             </InfoBox>
           </TagInFooter>

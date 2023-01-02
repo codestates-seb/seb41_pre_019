@@ -1,5 +1,4 @@
-
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   background-color: #232629;
@@ -13,7 +12,6 @@ export const Container = styled.div`
   max-width: 1264px;
   margin: 0 auto;
 `;
-
 
 export const LogoContainer = styled.div`
   width: 64px;
@@ -89,4 +87,10 @@ export const License = styled.p`
 export const Paragraph = styled.div`
   margin-top: auto;
   margin-bottom: 24px;
+`;
+
+export const ImgBox = styled.div`
+  position: relative;
+  height: 52px;
+  width: 52px;
 `;

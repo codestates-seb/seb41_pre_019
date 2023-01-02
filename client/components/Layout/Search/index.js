@@ -83,6 +83,7 @@ function Search() {
         />
       </SearchContainer>
       {isOpen ? <SearchModal /> : null}
+
       {/* isOpen(검색창 클릭할때 true가 되고 모달창이 열림) */}
     </Container>
   );

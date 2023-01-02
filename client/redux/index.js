@@ -9,6 +9,13 @@ export const searchTagAction = (res) => {
   };
 };
 
+export const questionAction = (res) => {
+  return {
+    type: QUESTION,
+    payload: res,
+  };
+};
+
 const initialstate = {
   searchTag: "",
 };
@@ -33,7 +40,7 @@ export const askTagsAction = (res) => {
 
 export const askBodyAction = (res) => {
   return {
-    type: "BODY",
+    type: "CONTENT",
     payload: res,
   };
 };
@@ -45,10 +52,10 @@ const askReducer = (state = initialstate, action) => {
         ...state,
         title: action.payload,
       };
-    case "BODY":
+    case "CONTENT":
       return {
         ...state,
-        body: action.payload,
+        content: action.payload,
       };
 
     default:
@@ -60,7 +67,7 @@ const combinedReducer = combineReducers({
   // loginReducer,
   // questionReducer,
   searchReducer,
-   askReducer,
+  askReducer,
 });
 
 const store = createStore(combinedReducer);

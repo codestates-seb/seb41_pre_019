@@ -1,4 +1,6 @@
 import logo from "../../../assets/Stack_Overflow_icon.svg.png";
+import Image from "next/image";
+
 import {
   Categories,
   Category,
@@ -13,6 +15,7 @@ import {
   Paragraph,
   Sns,
   SnsContainer,
+  ImgBox,
 } from "./style";
 
 function Footer() {
@@ -20,7 +23,9 @@ function Footer() {
     <FooterContainer>
       <Container>
         <LogoContainer>
-          <Logo src={logo} />
+          <ImgBox>
+            <Image src={logo} priority={true} layout="fill" />
+          </ImgBox>
         </LogoContainer>
         <Categories>
           <Category>
@@ -68,10 +73,10 @@ function Footer() {
             </SnsContainer>
             <Paragraph>
               <License>
-                Site design / logo © 2022 Stack Exchange Inc; user
+                Site design / logo © 2023 Stack Exchange Inc; user
               </License>
               <License>contributions licensed under CC BY-SA.</License>
-              <License>rev 2022.10.25.33519</License>
+              <License>rev 2022.12.21.43127</License>
             </Paragraph>
           </Etc>
         </Categories>
