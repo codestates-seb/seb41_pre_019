@@ -9,6 +9,13 @@ export const searchTagAction = (res) => {
   };
 };
 
+export const questionAction = (res) => {
+  return {
+    type: QUESTION,
+    payload: res,
+  };
+};
+
 const initialstate = {
   searchTag: "",
 };
@@ -60,7 +67,7 @@ const combinedReducer = combineReducers({
   // loginReducer,
   // questionReducer,
   searchReducer,
-   askReducer,
+  askReducer,
 });
 
 const store = createStore(combinedReducer);
