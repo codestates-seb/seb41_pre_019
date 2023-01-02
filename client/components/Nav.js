@@ -20,16 +20,16 @@ export default function Example() {
           <img src="http://www.ranklogos.com/wp-content/uploads/2015/06/Stack-Overflow-Logo.png"></img>
         </button>
 
-        <form
+        {/* <form
           className="w-full sm:max-w-3xl"
           style={{ "padding-top": "10px", width: "30%" }}
         >
           <div className="relative">
-            {/* <div className="relative-1">
+            <div className="relative-1">
               <MagnifyingGlassIcon className="relative-2" aria-hidden="true" />
             </div> */}
-            <Search></Search>
-            {/* <input
+        <Search></Search>
+        {/* <input
               id="search"
               name="search"
               className="search-input"
@@ -38,16 +38,16 @@ export default function Example() {
               onChange={(e) => setSearch(e.target.value)}
               
             /> */}
-          </div>
-          <button
-            className="hidden"
-            style={{ display: "none" }}
-            onClick={(e) => {
-              e.preventDefault();
-              router.push(`/AllQuestions?search=${search}`);
-            }}
-          ></button>
-        </form>
+        {/* </div> */}
+        <button
+          className="hidden"
+          style={{ display: "none" }}
+          onClick={(e) => {
+            e.preventDefault();
+            router.push(`/AllQuestions?search=${search}`);
+          }}
+        ></button>
+        {/* </form> */}
         {isLogged ? (
           <button
             onClick={() => router.push("/profile")}
