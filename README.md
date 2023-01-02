@@ -10,7 +10,7 @@
 |서범길 (FE / 팀장)|김예본 (FE)|이승준 (FE)|선우예림 (FE)|
 |:-:|:-:|:-:|:-:|
 |<img src="https://avatars.githubusercontent.com/u/110971394?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111414343?v=4" width=150 >|<img src="https://avatars.githubusercontent.com/u/111476477?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/54367532?v=4" width=150>|
-|[@dohyeons](https://github.com/dohyeons)|[@HA-SEUNG-JEONG](https://github.com/HA-SEUNG-JEONG)|  [@01055986186](https://github.com/01055986186)   |[@Eugenius1st](https://github.com/Eugenius1st)|
+|[@dohyeons](https://github.com/dohyeons)|[@FE012](https://github.com/FE012)|  [@01055986186](https://github.com/01055986186)   |[@Eugenius1st](https://github.com/Eugenius1st)|
 
 <br><br>
 
