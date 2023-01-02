@@ -15,7 +15,7 @@ export const SearchContainer = styled.div`
   padding: 7.8px 9.1px 7.8px 9.1px;
   border: 1px solid #babfc3;
   border-radius: 3px;
-  width: 80%;
+  width: 70%;
   background-color: white;
 `;
 
