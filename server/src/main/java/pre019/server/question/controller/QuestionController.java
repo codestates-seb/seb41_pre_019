@@ -65,15 +65,15 @@ public class QuestionController {
         Question question = questionService.findQuestion(questionId);
 
         // For Pagination
-        Page<Answer> answerPage = answerService.findAnswers(questionId,page-1, 20);
+        Page<Answer> answerPage = answerService.findAnswers(questionId,page-1, 10);
         return new ResponseEntity(new MultiQuestionResponseDto(
                 questionMapper.questionToQuestionResponseDto(question),answerPage.getContent(),answerPage),
                 HttpStatus.OK);
     }
 
     @GetMapping
-    public ResponseEntity getQuestions(@RequestParam int page, @RequestParam int size) {
-        Page<Question> questionPage = questionService.findQuestions(page-1,size);
+    public ResponseEntity getQuestions(@RequestParam int page) {
+        Page<Question> questionPage = questionService.findQuestions(page-1,10);
         List<Question> questions = questionPage.getContent();
         return new ResponseEntity(new MultiResponseDto<>(
                 questionMapper.questionsToQuestionResponses(questions), questionPage),HttpStatus.OK);
