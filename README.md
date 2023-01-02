@@ -7,13 +7,10 @@
 <br><br>
 
 ## Team Members
-|Front-end|Front-end|Front-end|Back-end|
-|:--:|:--:|:--:|:--:|
-|서범길(팀장)|이승준|김예본|선우예림|
-
-|<img src="https://avatars.githubusercontent.com/u/110971394?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111414343?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111476477?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/54367532?v=4" width=150>|
-|[@kongalabear](https://github.com/kongalabear)|[@01055986186](https://github.com/01055986186)|[@FE012](https://github.com/FE012)|[@yerimsw](https://github.com/yerimsw)|
-
+|서범길 (FE / 팀장)|김예본 (FE)|이승준 (FE)|선우예림 (BE)|
+|:-:|:-:|:-:|:-:|
+|<img src="https://avatars.githubusercontent.com/u/110971394?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111414343?v=4" width=150 >|<img src="https://avatars.githubusercontent.com/u/106265483?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/54367532?v=4" width=150>|
+|[@kongalabear](https://github.com/kongalabear)%7C [@FE012](https://github.com/FE012)%7C [@01055986186](https://github.com/01055986186)   |[@yerimsw](https://github.com/yerimsw)%7C
 <br><br>
 
 ## ER-Diagram
