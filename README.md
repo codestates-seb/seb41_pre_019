@@ -11,7 +11,7 @@
 |:--:|:--:|:--:|:--:|
 |서범길(팀장)|이승준|김예본|선우예림|
 
-|<img src="https://avatars.githubusercontent.com/u/110971394?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111414343?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/107922059?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111476477?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/54367532?v=4" width=150>|
+|<img src="https://avatars.githubusercontent.com/u/110971394?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111414343?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/111476477?v=4" width=150>|<img src="https://avatars.githubusercontent.com/u/54367532?v=4" width=150>|
 |[@kongalabear](https://github.com/kongalabear)|[@01055986186](https://github.com/01055986186)|[@FE012](https://github.com/FE012)|[@yerimsw](https://github.com/yerimsw)|
 
 <br><br>
