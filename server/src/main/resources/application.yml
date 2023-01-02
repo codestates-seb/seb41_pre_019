@@ -5,7 +5,7 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: {RDS}/test?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    url:
     username:
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
