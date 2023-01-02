@@ -35,9 +35,7 @@ const AskQuestion = () => {
     dispatch(askTagsAction([]));
   }, []);
 
-    const content = useSelector((state) => state.askReducer.content);
-
-
+  const content = useSelector((state) => state.askReducer.content);
 
   function handleSubmit() {
     let title = titleInputValue.current.value;

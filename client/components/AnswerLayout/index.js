@@ -3,6 +3,7 @@ import { Container, Count, Header } from "./style";
 import WriteAnswer from "./WriteAnswer/index";
 
 function AnswerLayout({ answers, questionId }) {
+  console.log(" AnswerLayout", answers, questionId);
   return (
     answers && (
       <Container>

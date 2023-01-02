@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import authStore from "../store/auth";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
-// import Search from "../components/Layout/Search/index";
+import Search from "../components/Layout/Search/index";
 
 export default function Example() {
   const router = useRouter();
@@ -25,11 +25,11 @@ export default function Example() {
           style={{ "padding-top": "10px", width: "30%" }}
         >
           <div className="relative">
-            <div className="relative-1">
+            {/* <div className="relative-1">
               <MagnifyingGlassIcon className="relative-2" aria-hidden="true" />
-            </div>
-            {/* <Search></Search> */}
-            <input
+            </div> */}
+            <Search></Search>
+            {/* <input
               id="search"
               name="search"
               className="search-input"
@@ -37,7 +37,7 @@ export default function Example() {
               type="search"
               onChange={(e) => setSearch(e.target.value)}
               
-            />
+            /> */}
           </div>
           <button
             className="hidden"

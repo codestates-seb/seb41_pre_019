@@ -36,7 +36,7 @@ const Question = ({ list }) => {
               <span>{list.vote} votes &nbsp;</span>
             </VotesCount>
             <AnswerCount>
-              <span>3 answers&nbsp;</span>
+              <span> answers&nbsp;</span>
             </AnswerCount>
             <ViewsCount>
               <span>0 views</span>
